@@ -1,3 +1,5 @@
+import time
+
 test = ['987654321111111', '811111111111119', '234234234234278', '818181911112111']
 
 with open("day3/joltInput.txt") as file:
@@ -35,7 +37,7 @@ def getHighestJoltage12(bank: str) -> int:
             if int(bank[idx]) > outputList[dig]:
                 outputList[dig] = int(bank[idx])
                 idxStart = idx
-                
+
     # convert list of ints -> list of str -> str -> int
     delim = ""
     listStr = map(str, outputList)
@@ -46,10 +48,14 @@ def getHighestJoltage12(bank: str) -> int:
 
 summedJolts = 0
 
+s = time.time()
+
 for bank in allBanks:
     jolt = getHighestJoltage12(bank)
     summedJolts += jolt
     print(jolt)
 
+e = time.time()
 
 print("The overall max Jolt is: " + str(summedJolts))
+print("Time taken: " + str(e - s) + " seconds")
