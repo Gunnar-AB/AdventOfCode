@@ -27,7 +27,6 @@ def getHighestJoltage2(bank: str) -> int:
 def getHighestJoltage12(bank: str) -> int:
     numberDigits = 12
     outputList = [0] * 12
-    n1 = n2 = 0
     idxStart = -1
 
     for dig in range(numberDigits):
