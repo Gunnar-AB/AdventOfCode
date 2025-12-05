@@ -1,9 +1,9 @@
 import time
 
 fresh_ranges = []
-ingredients = []
+ingredients  = []
 
-with open("db.txt", encoding="utf-8") as file:
+with open("day5/db.txt", encoding="utf-8") as file:
     for _line in file:
         _line = _line.rstrip()
         if "-" in _line:
