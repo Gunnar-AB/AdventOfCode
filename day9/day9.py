@@ -68,12 +68,12 @@ print("Time taken: " + str(e - s) + " seconds")
 # plot shape
 if True:
     win = tkinter.Tk()
-    win.geometry("1600x900")
-    canvas = tkinter.Canvas(win, width=1500, height=800, background="yellow")
+    win.geometry("1000x1000")
+    canvas = tkinter.Canvas(win, width=900, height=900, background="yellow")
     canvas.grid()
 
-    xf = 1500/100000
-    yf = 800/100000
+    xf = 900/100000
+    yf = 900/100000
 
     for i in range(len(coords) - 1):
         canvas.create_line(coords[i][0]*xf, coords[i][1]*yf, coords[i+1][0]*xf, coords[i+1][1]*yf)
